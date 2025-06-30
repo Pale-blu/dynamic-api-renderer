@@ -1,0 +1,25 @@
+{
+  "id": "google-sheets-add-row",
+  "name": "Add Row to Google Sheets",
+  "service": "Google Sheets",
+  "description": "Add a row to a specified Google Sheet",
+  "auth": {
+    "type": "OAUTH2",
+    "provider": "Google",
+    "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+    "tokenUrl": "https://oauth2.googleapis.com/token",
+    "scopes": ["https://www.googleapis.com/auth/spreadsheets"],
+    "clientId": "<GOOGLE_CLIENT_ID>",
+    "clientSecret": "<GOOGLE_CLIENT_SECRET>",
+    "redirectUri": "http://localhost:5000/auth/google/callback"
+  },
+  "inputs": [
+    { "type": "text", "name": "Spreadsheet ID", "key": "spreadsheetId" },
+    { "type": "text", "name": "Sheet Name", "key": "sheetName" },
+    { "type": "json", "name": "Row Data", "key": "rowData" }
+  ],
+  "output": {
+    "type": "json",
+    "description": "Returns the newly added row object."
+  }
+}

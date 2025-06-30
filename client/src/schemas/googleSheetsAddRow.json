@@ -1,0 +1,17 @@
+{
+  "id": "google-sheets-add-row",
+  "name": "Add Row to Google Sheets",
+  "auth": {
+    "type": "OAUTH2",
+    "provider": "Google"
+  },
+  "inputs": [
+    { "type": "text", "name": "Spreadsheet ID", "key": "spreadsheetId" },
+    { "type": "text", "name": "Sheet Name", "key": "sheetName" },
+    { "type": "json", "name": "Row Data (JSON)", "key": "rowData" }
+  ],
+  "output": {
+    "type": "json",
+    "description": "Returns the updated sheet row."
+  }
+}
